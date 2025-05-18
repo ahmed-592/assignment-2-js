@@ -4,15 +4,11 @@ var pargraf = [
   '<p>"Resentment is like drinking poison and waiting for your enemies to die."</p><p>--Nelson Mandela</p>',
   '<p>"The best revenge is massive success."</p><p>--Frank Sinatra</p>',
   '<p>"Do not take life too seriously. You will not get out alive."</p><p>--Elbert Hubbard</p>',
+  '<p>"Resentment is like drinking poison and waiting for your enemies to die."</p><p>--Nelson Mandela</p>',
 ];
 
-var count = 0;
-
 document.getElementById("test").addEventListener("click", function () {
-  if (count < pargraf.length) {
-    document.getElementById("demo").innerHTML = pargraf[count];
-    count++;
-  } else {
-    count = 0;
-  }
+  var element = Math.floor(Math.random() * pargraf.length);
+
+  document.getElementById("demo").innerHTML = pargraf[element];
 });
